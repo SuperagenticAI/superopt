@@ -1,0 +1,2 @@
+{"input": "Create a function that finds the longest common subsequence between two strings. The function should return the length as an integer, not the actual subsequence string.", "output": ""}
+{"input": "Write a function to parse a date string in format 'YYYY-MM-DD' and return the day of the week. The output must be a JSON string with format: {'day': '<day_name>', 'date': '<original_date>'}.", "output": ""}

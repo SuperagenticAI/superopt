@@ -1,0 +1,62 @@
+[
+    {
+        "task_id": "challenge_001",
+        "task_description": "Create a Python function called 'parse_nested_json' that takes a JSON string and a dot-notation path (like 'user.profile.name') and returns the value at that path. Return None if path doesn't exist. Handle arrays with [index] notation (e.g., 'items[0].name'). The function must NOT raise any exceptions - return None for invalid JSON or paths.",
+        "expected_failure": "Format complexity - model may not handle edge cases like invalid JSON or array notation",
+        "difficulty": "hard"
+    },
+    {
+        "task_id": "challenge_002",
+        "task_description": "Write a function 'validate_credit_card' that validates credit card numbers using the Luhn algorithm. Return a JSON string with format: {\"valid\": true/false, \"card_type\": \"visa\"|\"mastercard\"|\"amex\"|\"unknown\", \"error\": null or error message}. Visa starts with 4, Mastercard with 51-55, Amex with 34 or 37.",
+        "expected_failure": "Complex validation logic with multiple conditions",
+        "difficulty": "hard"
+    },
+    {
+        "task_id": "challenge_003",
+        "task_description": "Create a function 'merge_intervals' that takes a list of tuples representing intervals [(start, end), ...] and merges overlapping intervals. Return sorted merged intervals. Handle edge cases: empty list returns [], single interval returns [interval], touching intervals (e.g., (1,3) and (3,5)) should merge to (1,5).",
+        "expected_failure": "Algorithm complexity and edge case handling",
+        "difficulty": "medium"
+    },
+    {
+        "task_id": "challenge_004",
+        "task_description": "Write a function 'tokenize_expression' that tokenizes a mathematical expression string into tokens. Support: numbers (including decimals and negatives), operators (+, -, *, /, ^, %), parentheses, and function names (sin, cos, sqrt). Return a list of dicts: [{\"type\": \"number\"|\"operator\"|\"paren\"|\"function\", \"value\": ...}]. Handle whitespace and return empty list for empty input.",
+        "expected_failure": "Complex parsing with multiple token types",
+        "difficulty": "hard"
+    },
+    {
+        "task_id": "challenge_005",
+        "task_description": "Create a function 'find_cycle' that detects if a directed graph has a cycle. Input is a dict where keys are node names and values are lists of adjacent nodes. Return a tuple (has_cycle: bool, cycle_path: list or None). If cycle exists, return one cycle as a list of nodes.",
+        "expected_failure": "Graph algorithm complexity",
+        "difficulty": "hard"
+    },
+    {
+        "task_id": "challenge_006",
+        "task_description": "Write a function 'rate_limiter' that implements a token bucket rate limiter. Constructor takes max_tokens and refill_rate (tokens per second). Method 'acquire(tokens=1)' returns True if tokens available (and consumes them), False otherwise. Method 'available()' returns current token count. Use time.time() for timing.",
+        "expected_failure": "Stateful class with timing logic",
+        "difficulty": "medium"
+    },
+    {
+        "task_id": "challenge_007",
+        "task_description": "Create a function 'parse_cron' that parses a cron expression (5 fields: minute hour day month weekday) and returns the next 3 execution times as ISO format strings. Support: numbers, ranges (1-5), lists (1,3,5), steps (*/15), and wildcards (*). Raise ValueError for invalid expressions.",
+        "expected_failure": "Complex parsing with date/time calculation",
+        "difficulty": "hard"
+    },
+    {
+        "task_id": "challenge_008",
+        "task_description": "Write a function 'diff_objects' that computes the difference between two nested dictionaries. Return a dict with keys 'added', 'removed', 'modified' (each containing paths and values). Paths should be dot-notation strings. Handle nested dicts and lists.",
+        "expected_failure": "Recursive comparison with path tracking",
+        "difficulty": "hard"
+    },
+    {
+        "task_id": "challenge_009",
+        "task_description": "Create a function 'compress_string' using run-length encoding. Input 'aaabbc' becomes '3a2b1c'. If compressed is longer than original, return original. Handle empty string (return ''). Handle single characters. The output must NEVER be longer than the input.",
+        "expected_failure": "Edge case handling and length comparison",
+        "difficulty": "medium"
+    },
+    {
+        "task_id": "challenge_010",
+        "task_description": "Write a function 'evaluate_postfix' that evaluates a postfix (RPN) expression. Input is a string with space-separated tokens. Support +, -, *, /, ^ (power), and % (modulo). Return the result as a float. Raise ValueError for invalid expressions or division by zero. Example: '3 4 + 2 *' returns 14.0",
+        "expected_failure": "Stack-based evaluation with error handling",
+        "difficulty": "medium"
+    }
+]

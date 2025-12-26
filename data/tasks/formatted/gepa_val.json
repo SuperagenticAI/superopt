@@ -1,0 +1,18 @@
+[
+  {
+    "input": "Create a function that validates an email address. The function must return a dictionary with keys 'valid' (boolean) and 'reason' (string), formatted as a JSON string.",
+    "answer": ""
+  },
+  {
+    "input": "Write a function to count word frequency in a text. The function must be case-insensitive and ignore punctuation. Return the result as a JSON string with words as keys and counts as values.",
+    "answer": ""
+  },
+  {
+    "input": "Create a function that finds the longest common subsequence between two strings. The function should return the length as an integer, not the actual subsequence string.",
+    "answer": ""
+  },
+  {
+    "input": "Write a function to parse a date string in format 'YYYY-MM-DD' and return the day of the week. The output must be a JSON string with format: {'day': '<day_name>', 'date': '<original_date>'}.",
+    "answer": ""
+  }
+]

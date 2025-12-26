@@ -1,0 +1,43 @@
+[
+    {
+        "task_description": "Create a Python function that calculates the factorial of a number n. The function must return the result as a JSON string, not a Python integer.",
+        "expected_output": "def factorial(n): return json.dumps(math.factorial(n))"
+    },
+    {
+        "task_description": "Write a function to find the maximum value in a list. The output must be formatted as: {'max': <value>, 'index': <index>} as a JSON string.",
+        "expected_output": ""
+    },
+    {
+        "task_description": "Create a function that reverses a string. The function must handle None input gracefully and return an empty string, not raise an exception.",
+        "expected_output": ""
+    },
+    {
+        "task_description": "Write a function to calculate the average of a list of numbers. The function must return 0.0 for empty lists, not raise an error or return None.",
+        "expected_output": ""
+    },
+    {
+        "task_description": "Create a function that sorts a list of dictionaries by a specified key. The function should preserve the original list order for items with equal values.",
+        "expected_output": ""
+    },
+    {
+        "task_description": "Write a function to merge two sorted lists. The function should handle duplicate values by including them in the result.",
+        "expected_output": ""
+    },
+    {
+        "task_description": "Create a function that validates an email address. The function must return a dictionary with keys 'valid' (boolean) and 'reason' (string), formatted as a JSON string.",
+        "expected_output": ""
+    },
+    {
+        "task_description": "Write a function to count word frequency in a text. The function must be case-insensitive and ignore punctuation. Return the result as a JSON string with words as keys and counts as values.",
+        "expected_output": ""
+    },
+    {
+        "task_description": "Create a function that finds the longest common subsequence between two strings. The function should return the length as an integer, not the actual subsequence string.",
+        "expected_output": ""
+    },
+    {
+        "task_description": "Write a function to parse a date string in format 'YYYY-MM-DD' and return the day of the week. The output must be a JSON string with format: {'day': '<day_name>', 'date': '<original_date>'}.",
+        "expected_output": ""
+    }
+]
+

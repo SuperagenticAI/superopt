@@ -1,0 +1,188 @@
+{
+  "baseline": [
+    {
+      "task": "Create a Python function that calculates the factorial of a number n. The function must return the result as a JSON string, not a Python integer.",
+      "trace": "ExecutionTrace(task_description='Create a Python function that calculates the factorial of a number n. The function must return the result as a JSON string, not a Python integer.', task_id='aider_1766630956.336181', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 336193), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Write a function to find the maximum value in a list. The output must be formatted as: {'max': <value>, 'index': <index>} as a JSON string.",
+      "trace": "ExecutionTrace(task_description=\"Write a function to find the maximum value in a list. The output must be formatted as: {'max': <value>, 'index': <index>} as a JSON string.\", task_id='aider_1766630956.336197', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 336200), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Create a function that reverses a string. The function must handle None input gracefully and return an empty string, not raise an exception.",
+      "trace": "ExecutionTrace(task_description='Create a function that reverses a string. The function must handle None input gracefully and return an empty string, not raise an exception.', task_id='aider_1766630956.336203', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 336205), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Write a function to calculate the average of a list of numbers. The function must return 0.0 for empty lists, not raise an error or return None.",
+      "trace": "ExecutionTrace(task_description='Write a function to calculate the average of a list of numbers. The function must return 0.0 for empty lists, not raise an error or return None.', task_id='aider_1766630956.336207', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 336215), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Create a function that sorts a list of dictionaries by a specified key. The function should preserve the original list order for items with equal values.",
+      "trace": "ExecutionTrace(task_description='Create a function that sorts a list of dictionaries by a specified key. The function should preserve the original list order for items with equal values.', task_id='aider_1766630956.336216', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 336218), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Write a function to merge two sorted lists. The function should handle duplicate values by including them in the result.",
+      "trace": "ExecutionTrace(task_description='Write a function to merge two sorted lists. The function should handle duplicate values by including them in the result.', task_id='aider_1766630956.336219', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 336221), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Create a function that validates an email address. The function must return a dictionary with keys 'valid' (boolean) and 'reason' (string), formatted as a JSON string.",
+      "trace": "ExecutionTrace(task_description=\"Create a function that validates an email address. The function must return a dictionary with keys 'valid' (boolean) and 'reason' (string), formatted as a JSON string.\", task_id='aider_1766630956.336221', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 336223), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Write a function to count word frequency in a text. The function must be case-insensitive and ignore punctuation. Return the result as a JSON string with words as keys and counts as values.",
+      "trace": "ExecutionTrace(task_description='Write a function to count word frequency in a text. The function must be case-insensitive and ignore punctuation. Return the result as a JSON string with words as keys and counts as values.', task_id='aider_1766630956.336224', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 336226), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Create a function that finds the longest common subsequence between two strings. The function should return the length as an integer, not the actual subsequence string.",
+      "trace": "ExecutionTrace(task_description='Create a function that finds the longest common subsequence between two strings. The function should return the length as an integer, not the actual subsequence string.', task_id='aider_1766630956.336226', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 336228), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Write a function to parse a date string in format 'YYYY-MM-DD' and return the day of the week. The output must be a JSON string with format: {'day': '<day_name>', 'date': '<original_date>'}.",
+      "trace": "ExecutionTrace(task_description=\"Write a function to parse a date string in format 'YYYY-MM-DD' and return the day of the week. The output must be a JSON string with format: {'day': '<day_name>', 'date': '<original_date>'}.\", task_id='aider_1766630956.336229', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 336230), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    }
+  ],
+  "gepa": [
+    {
+      "task": "Create a Python function that calculates the factorial of a number n. The function must return the result as a JSON string, not a Python integer.",
+      "trace": "ExecutionTrace(task_description='Create a Python function that calculates the factorial of a number n. The function must return the result as a JSON string, not a Python integer.', task_id='aider_1766630956.353846', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 353856), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Write a function to find the maximum value in a list. The output must be formatted as: {'max': <value>, 'index': <index>} as a JSON string.",
+      "trace": "ExecutionTrace(task_description=\"Write a function to find the maximum value in a list. The output must be formatted as: {'max': <value>, 'index': <index>} as a JSON string.\", task_id='aider_1766630956.35386', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 353862), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Create a function that reverses a string. The function must handle None input gracefully and return an empty string, not raise an exception.",
+      "trace": "ExecutionTrace(task_description='Create a function that reverses a string. The function must handle None input gracefully and return an empty string, not raise an exception.', task_id='aider_1766630956.353864', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 353866), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Write a function to calculate the average of a list of numbers. The function must return 0.0 for empty lists, not raise an error or return None.",
+      "trace": "ExecutionTrace(task_description='Write a function to calculate the average of a list of numbers. The function must return 0.0 for empty lists, not raise an error or return None.', task_id='aider_1766630956.353867', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 353868), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Create a function that sorts a list of dictionaries by a specified key. The function should preserve the original list order for items with equal values.",
+      "trace": "ExecutionTrace(task_description='Create a function that sorts a list of dictionaries by a specified key. The function should preserve the original list order for items with equal values.', task_id='aider_1766630956.353869', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 353870), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Write a function to merge two sorted lists. The function should handle duplicate values by including them in the result.",
+      "trace": "ExecutionTrace(task_description='Write a function to merge two sorted lists. The function should handle duplicate values by including them in the result.', task_id='aider_1766630956.353871', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 353873), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Create a function that validates an email address. The function must return a dictionary with keys 'valid' (boolean) and 'reason' (string), formatted as a JSON string.",
+      "trace": "ExecutionTrace(task_description=\"Create a function that validates an email address. The function must return a dictionary with keys 'valid' (boolean) and 'reason' (string), formatted as a JSON string.\", task_id='aider_1766630956.353873', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 353875), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Write a function to count word frequency in a text. The function must be case-insensitive and ignore punctuation. Return the result as a JSON string with words as keys and counts as values.",
+      "trace": "ExecutionTrace(task_description='Write a function to count word frequency in a text. The function must be case-insensitive and ignore punctuation. Return the result as a JSON string with words as keys and counts as values.', task_id='aider_1766630956.353876', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 353877), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Create a function that finds the longest common subsequence between two strings. The function should return the length as an integer, not the actual subsequence string.",
+      "trace": "ExecutionTrace(task_description='Create a function that finds the longest common subsequence between two strings. The function should return the length as an integer, not the actual subsequence string.', task_id='aider_1766630956.353878', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 353879), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    },
+    {
+      "task": "Write a function to parse a date string in format 'YYYY-MM-DD' and return the day of the week. The output must be a JSON string with format: {'day': '<day_name>', 'date': '<original_date>'}.",
+      "trace": "ExecutionTrace(task_description=\"Write a function to parse a date string in format 'YYYY-MM-DD' and return the day of the week. The output must be a JSON string with format: {'day': '<day_name>', 'date': '<original_date>'}.\", task_id='aider_1766630956.35388', prompt_snapshot={'system_prompt': 'You are a helpful coding assistant.', 'instruction_policy': '', 'few_shot_exemplars': [], 'output_format_spec': '', 'behavioral_constraints': []}, tool_calls=[], tool_errors=[], retrieval_queries=[], memory_reads=[], memory_writes=[], model_outputs=[], execution_results=None, compiler_errors=[], test_failures=[], runtime_exceptions=[], success=False, failure_type=<FailureType.MEMORY: 'MEMORY'>, failure_message=None, timestamp=datetime.datetime(2025, 12, 25, 2, 49, 16, 353881), duration_seconds=None, token_count=None)",
+      "success": false,
+      "retries": 0,
+      "tool_errors": 0,
+      "retrieval_misses": 0,
+      "tokens": 0
+    }
+  ],
+  "gepa_stats": {},
+  "optimized_prompt": "You are a helpful coding assistant."
+}

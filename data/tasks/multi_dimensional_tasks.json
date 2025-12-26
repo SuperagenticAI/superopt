@@ -1,0 +1,219 @@
+[
+    {
+        "task_id": "multi_001",
+        "task_description": "Refactor the authentication module to use JWT tokens instead of session-based auth. Update all references across the codebase, including tests.",
+        "category": "mixed_failure",
+        "expected_failures": [
+            {
+                "type": "retrieval",
+                "description": "Missing some authentication references in codebase search"
+            },
+            {
+                "type": "tool",
+                "description": "Wrong line numbers when editing files (0-indexed vs 1-indexed)"
+            },
+            {
+                "type": "prompt",
+                "description": "Unclear refactoring instructions, doesn't update all call sites"
+            }
+        ],
+        "difficulty": "hard",
+        "metadata": {
+            "failure_types": ["retrieval", "tool", "prompt"],
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "multi_002",
+        "task_description": "Add error handling to all file I/O operations in the data processing module. Ensure all file operations are wrapped in try-except blocks.",
+        "category": "tool_error",
+        "expected_failures": [
+            {
+                "type": "tool",
+                "description": "Line number errors when inserting try-except blocks"
+            },
+            {
+                "type": "retrieval",
+                "description": "Missing some file I/O operations in search results"
+            }
+        ],
+        "difficulty": "medium",
+        "metadata": {
+            "failure_types": ["tool", "retrieval"],
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "multi_003",
+        "task_description": "Update all database queries to use parameterized queries instead of string concatenation. Find all SQL queries in the codebase and refactor them.",
+        "category": "retrieval_failure",
+        "expected_failures": [
+            {
+                "type": "retrieval",
+                "description": "Codebase search misses some SQL queries in string literals"
+            },
+            {
+                "type": "prompt",
+                "description": "Doesn't understand parameterized query syntax correctly"
+            }
+        ],
+        "difficulty": "hard",
+        "metadata": {
+            "failure_types": ["retrieval", "prompt"],
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "multi_004",
+        "task_description": "Fix all type hints in the utils module. Add proper type annotations to all functions and ensure they match the actual implementation.",
+        "category": "tool_error",
+        "expected_failures": [
+            {
+                "type": "tool",
+                "description": "Syntax errors when adding type hints (wrong format)"
+            },
+            {
+                "type": "retrieval",
+                "description": "Missing some function signatures in codebase search"
+            }
+        ],
+        "difficulty": "medium",
+        "metadata": {
+            "failure_types": ["tool", "retrieval"],
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "multi_005",
+        "task_description": "Convert all print statements to use a logging framework. Replace all print() calls with appropriate log levels (info, debug, error) based on context.",
+        "category": "mixed_failure",
+        "expected_failures": [
+            {
+                "type": "retrieval",
+                "description": "Search misses print statements in some files"
+            },
+            {
+                "type": "tool",
+                "description": "Wrong line numbers when replacing print statements"
+            },
+            {
+                "type": "prompt",
+                "description": "Incorrect log level assignment (uses wrong level for context)"
+            }
+        ],
+        "difficulty": "medium",
+        "metadata": {
+            "failure_types": ["retrieval", "tool", "prompt"],
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "multi_006",
+        "task_description": "Add comprehensive docstrings to all public functions in the API module. Follow Google-style docstring format with Args, Returns, and Raises sections.",
+        "category": "retrieval_failure",
+        "expected_failures": [
+            {
+                "type": "retrieval",
+                "description": "Codebase search doesn't find all public functions"
+            },
+            {
+                "type": "prompt",
+                "description": "Docstring format doesn't match Google style exactly"
+            }
+        ],
+        "difficulty": "easy",
+        "metadata": {
+            "failure_types": ["retrieval", "prompt"],
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "multi_007",
+        "task_description": "Refactor the configuration loading to use environment variables with fallback to config files. Update all code that reads configuration.",
+        "category": "mixed_failure",
+        "expected_failures": [
+            {
+                "type": "retrieval",
+                "description": "Missing some config access points in search"
+            },
+            {
+                "type": "tool",
+                "description": "File path errors when accessing config files"
+            },
+            {
+                "type": "prompt",
+                "description": "Unclear priority order for env vars vs config files"
+            }
+        ],
+        "difficulty": "hard",
+        "metadata": {
+            "failure_types": ["retrieval", "tool", "prompt"],
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "multi_008",
+        "task_description": "Add input validation to all API endpoints. Check that required fields are present and have correct types before processing requests.",
+        "category": "tool_error",
+        "expected_failures": [
+            {
+                "type": "tool",
+                "description": "Syntax errors when adding validation code"
+            },
+            {
+                "type": "retrieval",
+                "description": "Missing some endpoint definitions in codebase search"
+            }
+        ],
+        "difficulty": "medium",
+        "metadata": {
+            "failure_types": ["tool", "retrieval"],
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "multi_009",
+        "task_description": "Update all deprecated function calls to use the new API. Find all usages of old_function() and replace with new_function() with proper parameter mapping.",
+        "category": "retrieval_failure",
+        "expected_failures": [
+            {
+                "type": "retrieval",
+                "description": "Codebase search misses some function calls in nested code"
+            },
+            {
+                "type": "prompt",
+                "description": "Incorrect parameter mapping between old and new functions"
+            }
+        ],
+        "difficulty": "hard",
+        "metadata": {
+            "failure_types": ["retrieval", "prompt"],
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "multi_010",
+        "task_description": "Add unit tests for all functions in the math_utils module. Create test cases that cover edge cases and error conditions.",
+        "category": "mixed_failure",
+        "expected_failures": [
+            {
+                "type": "retrieval",
+                "description": "Missing some functions when searching math_utils module"
+            },
+            {
+                "type": "tool",
+                "description": "File creation errors when setting up test files"
+            },
+            {
+                "type": "prompt",
+                "description": "Test cases don't cover all edge cases properly"
+            }
+        ],
+        "difficulty": "medium",
+        "metadata": {
+            "failure_types": ["retrieval", "tool", "prompt"],
+            "source": "synthetic"
+        }
+    }
+]
+

@@ -1,0 +1,2 @@
+{"input": "Create a function that validates an email address. The function must return a dictionary with keys 'valid' (boolean) and 'reason' (string), formatted as a JSON string.", "output": ""}
+{"input": "Write a function to count word frequency in a text. The function must be case-insensitive and ignore punctuation. Return the result as a JSON string with words as keys and counts as values.", "output": ""}

@@ -1,0 +1,17 @@
+{
+  "start_time": "2025-12-25T02:49:41.781543",
+  "end_time": "2025-12-25T02:51:11.654211",
+  "duration_seconds": 89.872668,
+  "model_config": "local_large",
+  "results": {
+    "baseline": "results/comprehensive_eval/baseline.json",
+    "gepa": "results/comprehensive_eval/gepa.json",
+    "ace": "results/comprehensive_eval/ace.json",
+    "superopt": "results/comprehensive_eval/superopt.json"
+  },
+  "parameters": {
+    "gepa_max_calls": 25,
+    "superopt_max_iterations": 3,
+    "delay_seconds": 20
+  }
+}

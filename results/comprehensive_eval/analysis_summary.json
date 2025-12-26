@@ -1,0 +1,94 @@
+{
+  "timestamp": "2025-12-25T02:57:30.546841",
+  "metrics": {
+    "baseline": {
+      "total_tasks": 10,
+      "successful_tasks": 0,
+      "failed_tasks": 10,
+      "success_rate": 0.0,
+      "avg_retries": 0.0,
+      "avg_tool_errors": 0.0,
+      "avg_retrieval_misses": 0.0,
+      "avg_tokens": 0.0,
+      "total_tokens": 0,
+      "failure_types": {
+        "MEMORY": 10
+      }
+    },
+    "gepa": {
+      "total_tasks": 10,
+      "successful_tasks": 0,
+      "failed_tasks": 10,
+      "success_rate": 0.0,
+      "avg_retries": 0.0,
+      "avg_tool_errors": 0.0,
+      "avg_retrieval_misses": 0.0,
+      "avg_tokens": 0.0,
+      "total_tokens": 0,
+      "failure_types": {
+        "MEMORY": 10
+      }
+    },
+    "ace": {
+      "total_tasks": 10,
+      "successful_tasks": 0,
+      "failed_tasks": 10,
+      "success_rate": 0.0,
+      "avg_retries": 0.0,
+      "avg_tool_errors": 0.0,
+      "avg_retrieval_misses": 0.0,
+      "avg_tokens": 0.0,
+      "total_tokens": 0,
+      "failure_types": {
+        "MEMORY": 10
+      }
+    },
+    "superopt": {
+      "total_tasks": 10,
+      "successful_tasks": 0,
+      "failed_tasks": 10,
+      "success_rate": 0.0,
+      "avg_retries": 0.0,
+      "avg_tool_errors": 0.0,
+      "avg_retrieval_misses": 0.0,
+      "avg_tokens": 0.0,
+      "total_tokens": 0,
+      "failure_types": {
+        "MEMORY": 10
+      }
+    }
+  },
+  "comparison": {
+    "gepa": {
+      "success_rate": 0.0,
+      "baseline_success_rate": 0.0,
+      "absolute_improvement": 0.0,
+      "relative_improvement": null,
+      "avg_tokens": 0.0,
+      "baseline_avg_tokens": 0.0,
+      "token_efficiency": 1.0
+    },
+    "ace": {
+      "success_rate": 0.0,
+      "baseline_success_rate": 0.0,
+      "absolute_improvement": 0.0,
+      "relative_improvement": null,
+      "avg_tokens": 0.0,
+      "baseline_avg_tokens": 0.0,
+      "token_efficiency": 1.0
+    },
+    "superopt": {
+      "success_rate": 0.0,
+      "baseline_success_rate": 0.0,
+      "absolute_improvement": 0.0,
+      "relative_improvement": null,
+      "avg_tokens": 0.0,
+      "baseline_avg_tokens": 0.0,
+      "token_efficiency": 1.0
+    }
+  },
+  "insights": [
+    "\u26a0\ufe0f  All methods show 0% success rate - agent adapters may be mock implementations",
+    "   This is expected if adapters haven't been connected to real agent execution"
+  ]
+}

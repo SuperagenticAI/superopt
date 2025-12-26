@@ -1,0 +1,222 @@
+{
+  "timestamp": "2025-12-25T21:19:18.836685",
+  "model": "ollama/llama3.2:3b",
+  "tasks_count": 5,
+  "ace": {
+    "method": "ACE",
+    "model": "ollama/llama3.2:3b",
+    "results": [
+      {
+        "task": "Create a Python function called 'parse_nested_json' that takes a JSON string and a dot-notation path (like 'user.profile.name') and returns the value at that path. Return None if path doesn't exist. Handle arrays with [index] notation (e.g., 'items[0].name'). The function must NOT raise any exceptions - return None for invalid JSON or paths.",
+        "task_index": 1,
+        "success": false,
+        "failure_type": "TOOL",
+        "duration": 300.04109501838684,
+        "context_size_tokens": 8,
+        "playbook_entries": 1,
+        "playbook_tokens": 35
+      },
+      {
+        "task": "Write a function 'validate_credit_card' that validates credit card numbers using the Luhn algorithm. Return a JSON string with format: {\"valid\": true/false, \"card_type\": \"visa\"|\"mastercard\"|\"amex\"|\"unknown\", \"error\": null or error message}. Visa starts with 4, Mastercard with 51-55, Amex with 34 or 37.",
+        "task_index": 2,
+        "success": true,
+        "failure_type": "NONE",
+        "duration": 7.4647300243377686,
+        "context_size_tokens": 82,
+        "playbook_entries": 2,
+        "playbook_tokens": 60
+      },
+      {
+        "task": "Create a function 'merge_intervals' that takes a list of tuples representing intervals [(start, end), ...] and merges overlapping intervals. Return sorted merged intervals. Handle edge cases: empty list returns [], single interval returns [interval], touching intervals (e.g., (1,3) and (3,5)) should merge to (1,5).",
+        "task_index": 3,
+        "success": true,
+        "failure_type": "NONE",
+        "duration": 14.657848119735718,
+        "context_size_tokens": 107,
+        "playbook_entries": 3,
+        "playbook_tokens": 84
+      },
+      {
+        "task": "Write a function 'tokenize_expression' that tokenizes a mathematical expression string into tokens. Support: numbers (including decimals and negatives), operators (+, -, *, /, ^, %), parentheses, and function names (sin, cos, sqrt). Return a list of dicts: [{\"type\": \"number\"|\"operator\"|\"paren\"|\"function\", \"value\": ...}]. Handle whitespace and return empty list for empty input.",
+        "task_index": 4,
+        "success": true,
+        "failure_type": "NONE",
+        "duration": 8.719950914382935,
+        "context_size_tokens": 131,
+        "playbook_entries": 4,
+        "playbook_tokens": 109
+      },
+      {
+        "task": "Create a function 'find_cycle' that detects if a directed graph has a cycle. Input is a dict where keys are node names and values are lists of adjacent nodes. Return a tuple (has_cycle: bool, cycle_path: list or None). If cycle exists, return one cycle as a list of nodes.",
+        "task_index": 5,
+        "success": true,
+        "failure_type": "NONE",
+        "duration": 6.9290149211883545,
+        "context_size_tokens": 156,
+        "playbook_entries": 5,
+        "playbook_tokens": 133
+      }
+    ],
+    "playbook": [
+      "- Task 'Create a Python function called 'parse_nested_json...' failed due to TOOL error. Consider: verify tool arguments match expected schema.",
+      "- Task 'Write a function 'validate_credit_card' that valid...' succeeded. Approach was effective.",
+      "- Task 'Create a function 'merge_intervals' that takes a l...' succeeded. Approach was effective.",
+      "- Task 'Write a function 'tokenize_expression' that tokeni...' succeeded. Approach was effective.",
+      "- Task 'Create a function 'find_cycle' that detects if a d...' succeeded. Approach was effective."
+    ],
+    "metrics": {
+      "success_count": 4,
+      "total_tasks": 5,
+      "success_rate": 80.0,
+      "total_duration": 337.8126389980316,
+      "final_context_tokens": 156,
+      "final_playbook_entries": 5,
+      "context_growth_rate": 31.2
+    }
+  },
+  "supermem": {
+    "method": "SuperMem",
+    "model": "ollama/llama3.2:3b",
+    "config": {
+      "max_entries": 10,
+      "decay_rate": 0.1
+    },
+    "results": [
+      {
+        "task": "Create a Python function called 'parse_nested_json' that takes a JSON string and a dot-notation path (like 'user.profile.name') and returns the value at that path. Return None if path doesn't exist. Handle arrays with [index] notation (e.g., 'items[0].name'). The function must NOT raise any exceptions - return None for invalid JSON or paths.",
+        "task_index": 1,
+        "success": false,
+        "failure_type": "TOOL",
+        "duration": 300.03823494911194,
+        "context_size_tokens": 8,
+        "memory_entries": 1,
+        "memory_types": [
+          "TOOL_RULE"
+        ]
+      },
+      {
+        "task": "Write a function 'validate_credit_card' that validates credit card numbers using the Luhn algorithm. Return a JSON string with format: {\"valid\": true/false, \"card_type\": \"visa\"|\"mastercard\"|\"amex\"|\"unknown\", \"error\": null or error message}. Visa starts with 4, Mastercard with 51-55, Amex with 34 or 37.",
+        "task_index": 2,
+        "success": true,
+        "failure_type": "NONE",
+        "duration": 8.030679941177368,
+        "context_size_tokens": 61,
+        "memory_entries": 2,
+        "memory_types": [
+          "STRATEGY",
+          "TOOL_RULE"
+        ]
+      },
+      {
+        "task": "Create a function 'merge_intervals' that takes a list of tuples representing intervals [(start, end), ...] and merges overlapping intervals. Return sorted merged intervals. Handle edge cases: empty list returns [], single interval returns [interval], touching intervals (e.g., (1,3) and (3,5)) should merge to (1,5).",
+        "task_index": 3,
+        "success": true,
+        "failure_type": "NONE",
+        "duration": 14.779734134674072,
+        "context_size_tokens": 81,
+        "memory_entries": 3,
+        "memory_types": [
+          "STRATEGY",
+          "TOOL_RULE"
+        ]
+      },
+      {
+        "task": "Write a function 'tokenize_expression' that tokenizes a mathematical expression string into tokens. Support: numbers (including decimals and negatives), operators (+, -, *, /, ^, %), parentheses, and function names (sin, cos, sqrt). Return a list of dicts: [{\"type\": \"number\"|\"operator\"|\"paren\"|\"function\", \"value\": ...}]. Handle whitespace and return empty list for empty input.",
+        "task_index": 4,
+        "success": true,
+        "failure_type": "NONE",
+        "duration": 8.736997127532959,
+        "context_size_tokens": 99,
+        "memory_entries": 4,
+        "memory_types": [
+          "STRATEGY",
+          "TOOL_RULE"
+        ]
+      },
+      {
+        "task": "Create a function 'find_cycle' that detects if a directed graph has a cycle. Input is a dict where keys are node names and values are lists of adjacent nodes. Return a tuple (has_cycle: bool, cycle_path: list or None). If cycle exists, return one cycle as a list of nodes.",
+        "task_index": 5,
+        "success": true,
+        "failure_type": "NONE",
+        "duration": 7.0541839599609375,
+        "context_size_tokens": 116,
+        "memory_entries": 5,
+        "memory_types": [
+          "STRATEGY",
+          "TOOL_RULE"
+        ]
+      }
+    ],
+    "final_memory": [
+      {
+        "type": "TOOL_RULE",
+        "content": "Avoid tool error pattern: Create a Python function calle...",
+        "confidence": 0.5904900000000002,
+        "task_index": 1
+      },
+      {
+        "type": "STRATEGY",
+        "content": "Successful approach for: Write a function 'validate_cre...",
+        "confidence": 0.5832000000000002,
+        "task_index": 2
+      },
+      {
+        "type": "STRATEGY",
+        "content": "Successful approach for: Create a function 'merge_inter...",
+        "confidence": 0.7290000000000001,
+        "task_index": 3
+      },
+      {
+        "type": "STRATEGY",
+        "content": "Successful approach for: Write a function 'tokenize_exp...",
+        "confidence": 0.81,
+        "task_index": 4
+      },
+      {
+        "type": "STRATEGY",
+        "content": "Successful approach for: Create a function 'find_cycle'...",
+        "confidence": 0.9,
+        "task_index": 5
+      }
+    ],
+    "metrics": {
+      "success_count": 4,
+      "total_tasks": 5,
+      "success_rate": 80.0,
+      "total_duration": 338.6398301124573,
+      "final_context_tokens": 116,
+      "final_memory_entries": 5,
+      "memory_types_used": [
+        "STRATEGY",
+        "TOOL_RULE"
+      ]
+    }
+  },
+  "comparison": {
+    "ace": {
+      "success_count": 4,
+      "total_tasks": 5,
+      "success_rate": 80.0,
+      "total_duration": 337.8126389980316,
+      "final_context_tokens": 156,
+      "final_playbook_entries": 5,
+      "context_growth_rate": 31.2
+    },
+    "supermem": {
+      "success_count": 4,
+      "total_tasks": 5,
+      "success_rate": 80.0,
+      "total_duration": 338.6398301124573,
+      "final_context_tokens": 116,
+      "final_memory_entries": 5,
+      "memory_types_used": [
+        "STRATEGY",
+        "TOOL_RULE"
+      ]
+    },
+    "superopt": {
+      "success": 10,
+      "total": 10
+    }
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "input": "Create a Python function that calculates the factorial of a number n. The function must return the result as a JSON string, not a Python integer.",
+    "answer": "def factorial(n): return json.dumps(math.factorial(n))"
+  },
+  {
+    "input": "Write a function to find the maximum value in a list. The output must be formatted as: {'max': <value>, 'index': <index>} as a JSON string.",
+    "answer": ""
+  },
+  {
+    "input": "Create a function that reverses a string. The function must handle None input gracefully and return an empty string, not raise an exception.",
+    "answer": ""
+  },
+  {
+    "input": "Write a function to calculate the average of a list of numbers. The function must return 0.0 for empty lists, not raise an error or return None.",
+    "answer": ""
+  },
+  {
+    "input": "Create a function that sorts a list of dictionaries by a specified key. The function should preserve the original list order for items with equal values.",
+    "answer": ""
+  },
+  {
+    "input": "Write a function to merge two sorted lists. The function should handle duplicate values by including them in the result.",
+    "answer": ""
+  }
+]

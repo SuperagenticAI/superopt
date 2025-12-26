@@ -1,0 +1,123 @@
+[
+    {
+        "task_id": "prompt_001",
+        "task_description": "Create a Python function that calculates the factorial of a number n. The function must return the result as a JSON string, not a Python integer.",
+        "category": "format_violation",
+        "expected_failure": "Agent returns Python int instead of JSON string",
+        "difficulty": "medium",
+        "metadata": {
+            "failure_type": "prompt",
+            "subtype": "format_violation",
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "prompt_002",
+        "task_description": "Write a function to find the maximum value in a list. The output must be formatted as: {'max': <value>, 'index': <index>} as a JSON string.",
+        "category": "format_violation",
+        "expected_failure": "Agent returns Python dict or single value instead of JSON string",
+        "difficulty": "easy",
+        "metadata": {
+            "failure_type": "prompt",
+            "subtype": "format_violation",
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "prompt_003",
+        "task_description": "Create a function that reverses a string. The function must handle None input gracefully and return an empty string, not raise an exception.",
+        "category": "missing_constraints",
+        "expected_failure": "Agent doesn't handle None input, raises AttributeError",
+        "difficulty": "easy",
+        "metadata": {
+            "failure_type": "prompt",
+            "subtype": "missing_constraints",
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "prompt_004",
+        "task_description": "Write a function to calculate the average of a list of numbers. The function must return 0.0 for empty lists, not raise an error or return None.",
+        "category": "missing_constraints",
+        "expected_failure": "Agent raises ZeroDivisionError or returns None for empty list",
+        "difficulty": "easy",
+        "metadata": {
+            "failure_type": "prompt",
+            "subtype": "missing_constraints",
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "prompt_005",
+        "task_description": "Create a function that sorts a list of dictionaries by a specified key. The function should preserve the original list order for items with equal values.",
+        "category": "ambiguous_instructions",
+        "expected_failure": "Agent doesn't preserve order for equal values (unstable sort)",
+        "difficulty": "medium",
+        "metadata": {
+            "failure_type": "prompt",
+            "subtype": "ambiguous_instructions",
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "prompt_006",
+        "task_description": "Write a function to merge two sorted lists. The function should handle duplicate values by including them in the result.",
+        "category": "ambiguous_instructions",
+        "expected_failure": "Agent removes duplicates instead of preserving them",
+        "difficulty": "medium",
+        "metadata": {
+            "failure_type": "prompt",
+            "subtype": "ambiguous_instructions",
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "prompt_007",
+        "task_description": "Create a function that validates an email address. The function must return a dictionary with keys 'valid' (boolean) and 'reason' (string), formatted as a JSON string.",
+        "category": "format_violation",
+        "expected_failure": "Agent returns Python dict instead of JSON string",
+        "difficulty": "medium",
+        "metadata": {
+            "failure_type": "prompt",
+            "subtype": "format_violation",
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "prompt_008",
+        "task_description": "Write a function to count word frequency in a text. The function must be case-insensitive and ignore punctuation. Return the result as a JSON string with words as keys and counts as values.",
+        "category": "missing_constraints",
+        "expected_failure": "Agent doesn't handle case-insensitivity or punctuation correctly",
+        "difficulty": "medium",
+        "metadata": {
+            "failure_type": "prompt",
+            "subtype": "missing_constraints",
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "prompt_009",
+        "task_description": "Create a function that finds the longest common subsequence between two strings. The function should return the length as an integer, not the actual subsequence string.",
+        "category": "ambiguous_instructions",
+        "expected_failure": "Agent returns the subsequence string instead of length",
+        "difficulty": "hard",
+        "metadata": {
+            "failure_type": "prompt",
+            "subtype": "ambiguous_instructions",
+            "source": "synthetic"
+        }
+    },
+    {
+        "task_id": "prompt_010",
+        "task_description": "Write a function to parse a date string in format 'YYYY-MM-DD' and return the day of the week. The output must be a JSON string with format: {'day': '<day_name>', 'date': '<original_date>'}.",
+        "category": "format_violation",
+        "expected_failure": "Agent returns Python dict or just day name instead of JSON string",
+        "difficulty": "medium",
+        "metadata": {
+            "failure_type": "prompt",
+            "subtype": "format_violation",
+            "source": "synthetic"
+        }
+    }
+]
+
