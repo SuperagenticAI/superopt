@@ -5,7 +5,7 @@ A unified framework for optimizing agent environments (prompts, tools, retrieval
 without modifying model parameters.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from superopt.core.environment import AgenticEnvironment
 from superopt.core.nlg import NaturalLanguageGradient

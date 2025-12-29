@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/SuperOpt_logo.png" alt="SuperOpt Logo" width="200" height="auto">
+  <img src="https://raw.githubusercontent.com/SuperagenticAI/superopt/main/assets/SuperOpt_logo.png" alt="SuperOpt Logo" width="400" height="auto">
 
   # 🚀 SuperOpt
 
