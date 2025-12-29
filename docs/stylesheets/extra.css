@@ -230,11 +230,18 @@
 /* ===== FIXED TAB NAVIGATION - RESPONSIVE ===== */
 [data-md-color-scheme="default"] .md-tabs {
   background-color: #ffffff !important;
-  border-bottom: 1px solid #e0e0e0 !important;
+  border-bottom: none !important;
   overflow-x: auto !important;
   overflow-y: hidden !important;
   scrollbar-width: none !important; /* Firefox */
   -ms-overflow-style: none !important; /* IE/Edge */
+  /* Boxed overlay effect */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98)) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 0 0 8px 8px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid rgba(0, 121, 107, 0.1) !important;
+  border-top: none !important;
 }
 
 [data-md-color-scheme="default"] .md-tabs::-webkit-scrollbar {
@@ -272,11 +279,18 @@
 /* Dark mode tabs */
 [data-md-color-scheme="slate"] .md-tabs {
   background-color: #000000 !important;
-  border-bottom: 1px solid #333333 !important;
+  border-bottom: none !important;
   overflow-x: auto !important;
   overflow-y: hidden !important;
   scrollbar-width: none !important;
   -ms-overflow-style: none !important;
+  /* Boxed overlay effect */
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.98)) !important;
+  backdrop-filter: blur(10px) !important;
+  border-radius: 0 0 8px 8px !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid rgba(77, 182, 172, 0.2) !important;
+  border-top: none !important;
 }
 
 [data-md-color-scheme="slate"] .md-tabs::-webkit-scrollbar {
@@ -644,7 +658,7 @@ body .md-main__inner:has(.md-nav__link[href="."].md-nav__link--active) {
 }
 
 .hero-logo-large {
-  width: clamp(300px, 40vw, 500px);
+  width: clamp(400px, 50vw, 650px);
   height: auto;
   opacity: 0.95;
   filter: drop-shadow(0 8px 20px rgba(156, 39, 176, 0.3));
@@ -656,15 +670,15 @@ body .md-main__inner:has(.md-nav__link[href="."].md-nav__link--active) {
 }
 
 .hero-subtitle {
-  font-size: 2.2rem;
-  line-height: 1.6;
+  font-size: 4.5rem;
+  line-height: 1.2;
   background: linear-gradient(135deg, #9c27b0, #ff4081, #ff9800);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin: 0 0 1rem 0;
-  font-weight: 600;
-  max-width: 600px;
+  font-weight: 800;
+  max-width: 800px;
 }
 
 .hero-built-by {
@@ -759,11 +773,11 @@ body .md-main__inner:has(.md-nav__link[href="."].md-nav__link--active) {
   }
 
   .hero-logo-large {
-    width: clamp(200px, 60vw, 300px);
+    width: clamp(250px, 70vw, 400px);
   }
 
   .hero-subtitle {
-    font-size: 1.8rem;
+    font-size: 3.2rem;
     max-width: 100%;
   }
 
@@ -1054,9 +1068,9 @@ body .md-main__inner:has(.md-nav__link[href="."].md-nav__link--active) {
 
 /* ===== HEADER AND CONTENT SPACING ===== */
 
-/* Add space between header/tabs and content */
+/* Ultra-tight spacing between header/tabs and content */
 .md-main {
-  margin-top: 2rem !important;
+  margin-top: 0.25rem !important;
 }
 
 /* ===== FOOTER STYLING ===== */
