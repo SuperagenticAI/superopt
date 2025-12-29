@@ -1,16 +1,51 @@
-# SuperOpt: Agentic Environment Optimization for Autonomous AI Agents
+<div align="center">
+  <img src="assets/SuperOpt_logo.png" alt="SuperOpt Logo" width="200" height="auto">
 
-**SuperOpt** is a unified framework for optimizing agent environments (prompts, tools, retrieval, memory) without modifying model parameters. It treats the entire agent environment as a structured optimization target, enabling autonomous agents to self-correct and stabilize over time.
+  # 🚀 SuperOpt
 
-## Overview
+  **Agentic Environment Optimization for Autonomous AI Agents**
 
-SuperOpt formalizes optimization as iterative descent over **Natural Language Gradients** derived from execution traces. A meta-diagnostic controller attributes failures to specific environment layers and routes corrective updates to specialized optimization engines:
+  <p>
+    <a href="https://pypi.org/project/superopt/"><img src="https://img.shields.io/pypi/v/superopt.svg" alt="PyPI"></a>
+    <a href="https://github.com/SuperagenticAI/superopt/actions"><img src="https://github.com/SuperagenticAI/superopt/workflows/CI/badge.svg" alt="CI"></a>
+    <a href="https://github.com/SuperagenticAI/superopt/blob/main/LICENSE"><img src="https://img.shields.io/github/license/SuperagenticAI/superopt.svg" alt="License"></a>
+    <a href="https://github.com/SuperagenticAI/superopt/stargazers"><img src="https://img.shields.io/github/stars/SuperagenticAI/superopt.svg" alt="GitHub stars"></a>
+  </p>
 
-- **SuperController**: Diagnostic meta-controller for failure routing
-- **SuperPrompt**: Evolutionary instruction optimization (GEPA-based)
-- **SuperReflexion**: Self-healing tool schema repair
-- **SuperRAG**: Adaptive retrieval optimization
-- **SuperMem**: Typed memory with decay and conflict resolution
+  <p align="center">
+    <em>SuperOpt is a unified framework for optimizing agent environments (prompts, tools, retrieval, memory) without modifying model parameters. It treats the entire agent environment as a structured optimization target, enabling autonomous agents to self-correct and stabilize over time.</em>
+  </p>
+</div>
+
+---
+
+## ✨ Key Features
+
+<div align="center">
+
+| 🚀 **Environment-Level Optimization** | 🎯 **Automatic Failure Diagnosis** | 🛡️ **Stability Guarantees** |
+|:-------------------------------------:|:----------------------------------:|:----------------------------:|
+| Optimize prompts, tools, retrieval, and memory as a unified system | Intelligent routing of failures to appropriate optimizers | Hierarchy of mutability prevents oscillation and ensures convergence |
+
+| 📊 **Trace-Based Learning** | ⚡ **No Model Retraining** | 🔧 **Framework Agnostic** |
+|:--------------------------:|:-------------------------:|:-------------------------:|
+| Uses execution traces as supervision signals | All improvements happen at the environment level | Works with DSPy, CrewAI, AutoGen, and custom agents |
+
+</div>
+
+## 🏗️ Architecture Overview
+
+SuperOpt formalizes optimization as iterative descent over **Natural Language Gradients** derived from execution traces. A meta-diagnostic controller attributes failures to specific environment layers and routes corrective updates to specialized optimization engines.
+
+### Core Components
+
+<div align="center">
+
+| 🎯 **SuperController** | 📝 **SuperPrompt** | 🔧 **SuperReflexion** | 🔍 **SuperRAG** | 🧠 **SuperMem** |
+|:----------------------:|:------------------:|:----------------------:|:----------------:|:---------------:|
+| Diagnostic meta-controller for failure routing | Evolutionary instruction optimization (GEPA-based) | Self-healing tool schema repair | Adaptive retrieval optimization | Typed memory with decay and conflict resolution |
+
+</div>
 
 ## Research Paper
 
@@ -24,15 +59,15 @@ The research paper describing SuperOpt has been uploaded and will be available s
 - **Trace-Based Learning**: Uses execution traces as supervision signals
 - **No Model Retraining**: All improvements happen at the environment level
 
-## Installation
+## 📦 Installation
 
-### Basic Installation
+### Quick Install
 
 ```bash
 pip install superopt
 ```
 
-### Install from Source
+### From Source
 
 ```bash
 git clone https://github.com/SuperagenticAI/superopt.git
@@ -42,28 +77,30 @@ pip install -e .
 
 ### Optional Dependencies
 
-```bash
-# Development tools (pytest, black, ruff)
-pip install -e ".[dev]"
+<div align="center">
 
-# Aider integration (for coding agent optimization)
-pip install -e ".[aider]"
+| Feature | Install Command | Description |
+|:-------:|:---------------:|:-----------:|
+| 🧪 **Development** | `pip install -e ".[dev]"` | Testing, linting, formatting tools |
+| 🤖 **Aider Integration** | `pip install -e ".[aider]"` | Coding agent optimization |
+| 🔍 **LanceDB RAG** | `pip install -e ".[lancedb]"` | Vector database for retrieval |
+| 📦 **Everything** | `pip install -e ".[all]"` | All optional dependencies |
 
-# LanceDB for RAG optimization
-pip install -e ".[lancedb]"
+</div>
 
-# All optional dependencies
-pip install -e ".[all]"
-```
+## ⚡ Quick Start
 
-## Quick Start
+### 🚀 Try It Now
 
-### Basic Usage
+<div align="center">
+
+**Copy and run this complete example:**
 
 ```python
-from superopt import SuperOpt, AgenticEnvironment, ExecutionTrace
+# Complete SuperOpt Example - Copy this entire file to test SuperOpt
+from superopt import SuperOpt, AgenticEnvironment
 from superopt.core.environment import PromptConfig, ToolSchema
-from superopt.core.trace import ToolCall, FailureType
+from superopt.core.trace import ExecutionTrace, ToolCall
 
 # 1. Define your agent's environment
 environment = AgenticEnvironment(
@@ -82,7 +119,7 @@ environment = AgenticEnvironment(
 # 2. Initialize the optimizer
 optimizer = SuperOpt(environment=environment)
 
-# 3. After your agent fails, create a trace
+# 3. Simulate agent execution with a failure
 trace = ExecutionTrace(
     task_description="Edit line 0 in test.py",
     success=False,
@@ -92,106 +129,161 @@ trace.tool_errors.append(ToolCall(
     arguments={"file": "test.py", "line": 0},
     error_message="Line numbers must be 1-indexed",
 ))
-trace.failure_type = FailureType.TOOL
 
-# 4. Optimize - SuperOpt will fix the tool schema
+# 4. Let SuperOpt learn and optimize
+print("Before optimization:")
+print(optimizer.environment.tools['edit_file'].description)
+print()
+
 optimizer.step(trace)
 
-# 5. The environment is now updated
+# 5. Check the improved environment
+print("After optimization:")
 print(optimizer.environment.tools['edit_file'].description)
-# Output: "Edit a file at a specific line. Note: Line numbers must be 1-indexed, not 0-indexed."
 ```
 
-### Run the Example
+**To test this example:**
+1. Save the code above as `test_superopt.py`
+2. Run `python test_superopt.py`
+3. You should see the tool description get updated with the 1-indexing constraint
+
+</div>
+
+### 🏃‍♂️ Run the Official Example
 
 ```bash
 python examples/basic_example.py
 ```
 
-## Architecture
+**Expected Output:**
+```
+SuperOpt Basic Example
+==================================================
 
-SuperOpt operates in an outer optimization loop surrounding the agent execution loop:
+1. Initial Environment:
+   Tool schema description: Edit a file by applying changes...
+
+2. Executing task with tool error...
+   Error: Line numbers must be 1-indexed, not 0-indexed
+
+3. Optimizing environment...
+
+4. Updated Environment:
+   Tool schema description length: 126 chars
+   ✓ Schema was updated with clarifications
+
+5. Statistics:
+   Controller diagnoses: {'PROMPT': 0, 'TOOL': 1, 'RETRIEVAL': 0, 'MEMORY': 0, 'NONE': 0}
+   Optimization steps: 1
+```
+
+## 🔄 How SuperOpt Works
+
+SuperOpt operates in an **outer optimization loop** surrounding the agent execution loop:
+
+<div align="center">
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    SuperOpt Optimization Loop                │
+│                    🚀 SuperOpt Optimization Loop             │
 │  ┌─────────────────────────────────────────────────────────┐│
-│  │                  Agent Execution Loop                    ││
+│  │                  🤖 Agent Execution Loop                 ││
 │  │   Task → Agent → Tool Calls → Results → Output          ││
 │  └─────────────────────────────────────────────────────────┘│
 │                           │                                  │
-│                    Execution Trace                           │
+│                    📊 Execution Trace                        │
 │                           ↓                                  │
 │  ┌─────────────────────────────────────────────────────────┐│
-│  │              SuperController (Diagnosis)                 ││
+│  │              🎯 SuperController (Diagnosis)              ││
 │  │   Classify failure: PROMPT | TOOL | RETRIEVAL | MEMORY  ││
 │  └─────────────────────────────────────────────────────────┘│
 │                           │                                  │
 │         ┌─────────────────┼─────────────────┐               │
 │         ↓                 ↓                 ↓               │
 │   ┌──────────┐     ┌──────────┐     ┌──────────┐           │
-│   │SuperPrompt│     │SuperReflexion│  │ SuperRAG │           │
-│   │(Prompts) │     │  (Tools)  │     │(Retrieval)│           │
+│   │📝 Super- │     │🔧 Super-   │     │🔍 Super- │           │
+│   │   Prompt │     │ Reflexion │     │   RAG   │           │
+│   │(Prompts) │     │  (Tools)  │     │(Retrieval)│          │
 │   └──────────┘     └──────────┘     └──────────┘           │
 │         │                 │                 │               │
 │         └─────────────────┼─────────────────┘               │
 │                           ↓                                  │
-│              Natural Language Gradient (∇_NL)               │
+│              🌟 Natural Language Gradient (∇_NL)            │
 │                           ↓                                  │
-│                  Updated Environment Φ                       │
+│                  ✨ Updated Environment Φ                   │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-**Optimization Steps:**
+</div>
 
-1. **Execute**: Run agent task under current environment
-2. **Capture**: Record structured execution trace
-3. **Diagnose**: SuperController classifies the failure mode
-4. **Route**: Send trace to the appropriate optimizer
-5. **Generate**: Create Natural Language Gradient update
-6. **Validate**: Check update against stability constraints
-7. **Apply**: Update environment and persist
-8. **Repeat**: Continue until convergence
+### 📋 Optimization Workflow
 
-## Components
+<div align="center">
 
-### SuperController
+| Step | Action | Description |
+|:----:|:------:|:-----------:|
+| 1️⃣ | **Execute** | Run agent task under current environment |
+| 2️⃣ | **Capture** | Record structured execution trace |
+| 3️⃣ | **Diagnose** | SuperController classifies the failure mode |
+| 4️⃣ | **Route** | Send trace to the appropriate optimizer |
+| 5️⃣ | **Generate** | Create Natural Language Gradient update |
+| 6️⃣ | **Validate** | Check update against stability constraints |
+| 7️⃣ | **Apply** | Update environment and persist |
+| 8️⃣ | **Repeat** | Continue until convergence |
 
-Diagnostic meta-controller that classifies failures into:
-- **PROMPT**: Instruction violations, format errors
-- **TOOL**: Schema violations, invalid arguments
-- **RETRIEVAL**: Missing symbols, empty results
-- **MEMORY**: Repeated mistakes, contradictions
+</div>
 
-### SuperPrompt
+## 🧩 Core Components
 
-Evolutionary prompt optimizer using:
-- Reflective mutation guided by execution traces
-- Pareto-based selection across multiple objectives
-- Population-based search
+### 🎯 SuperController
+**Diagnostic Meta-Controller**
 
-### SuperReflexion
+The intelligent orchestrator that analyzes execution traces and routes optimization tasks to the appropriate component:
 
-Tool schema repair that:
-- Analyzes tool failures
-- Generates schema clarifications
-- Appends constraints to tool descriptions
+- **PROMPT**: Handles instruction violations, format errors, and unclear prompts
+- **TOOL**: Detects schema violations, invalid arguments, and tool misuse
+- **RETRIEVAL**: Identifies missing symbols, empty results, and retrieval failures
+- **MEMORY**: Catches repeated mistakes, contradictions, and memory issues
 
-### SuperRAG
+### 📝 SuperPrompt
+**Evolutionary Prompt Optimizer**
 
-Retrieval optimizer that adapts:
-- `top_k` retrieval count
-- Chunk size and overlap
-- Reranking thresholds
-- Semantic vs structural modes
+Advances prompt engineering through systematic optimization:
 
-### SuperMem
+- Reflective mutation guided by execution traces and failure patterns
+- Pareto-based selection across multiple objectives (accuracy, efficiency, clarity)
+- Population-based search using GEPA methodology for prompt evolution
+- Automatic prompt refinement based on real-world performance data
 
-Typed memory system with:
-- Type hierarchy (TOOL_RULE > RAG_HEURISTIC > STRATEGY)
-- Exponential decay
-- Conflict resolution
-- Confidence tracking
+### 🔧 SuperReflexion
+**Self-Healing Tool Schemas**
+
+Automatically repairs and enhances tool definitions when agents encounter issues:
+
+- Analyzes tool failures and error patterns in real-time
+- Generates schema clarifications and constraint additions automatically
+- Appends important constraints to tool descriptions to prevent future errors
+- Learns from agent mistakes to improve tool reliability
+
+### 🔍 SuperRAG
+**Adaptive Retrieval Optimization**
+
+Dynamically optimizes retrieval-augmented generation systems:
+
+- Optimizes `top_k` retrieval count based on query complexity and context
+- Adapts chunk size and overlap for better semantic understanding
+- Tunes reranking thresholds to improve result relevance
+- Automatically switches between semantic vs structural retrieval modes
+
+### 🧠 SuperMem
+**Intelligent Memory System**
+
+Advanced memory management with hierarchical organization:
+
+- **Type hierarchy**: TOOL_RULE > RAG_HEURISTIC > STRATEGY for organized knowledge
+- **Exponential decay**: Relevance-based forgetting to maintain current knowledge
+- **Conflict resolution**: Automatic detection and resolution of contradictory information
+- **Confidence tracking**: Validation and uncertainty quantification for memory entries
 
 ## Integration with Agents
 
@@ -251,116 +343,101 @@ class MyAgentAdapter(AgentAdapter):
         return self._create_trace(result)
 ```
 
-## Running Evaluations
+## 📊 Evaluation & Benchmarks
 
-### Evaluate on Sample Tasks
-
-```bash
-# Run baseline (no optimization)
-python scripts/evaluate_baseline.py \
-    --tasks data/tasks/sample_tasks.json \
-    --output results/baseline.json
-
-# Run with GEPA (prompt-only optimization)
-python scripts/evaluate_gepa.py \
-    --tasks data/tasks/sample_tasks.json \
-    --output results/gepa.json
-
-# Run with SuperOpt (full optimization)
-python scripts/evaluate_superopt.py \
-    --tasks data/tasks/sample_tasks.json \
-    --output results/superopt.json
-
-# Compare all methods
-python scripts/compare_all.py \
-    --tasks data/tasks/sample_tasks.json \
-    --output results/comparison.json
-```
-
-### Analyze Results
+### 🏃‍♂️ Run Evaluations
 
 ```bash
+# Quick evaluation on sample tasks
+python scripts/evaluate_baseline.py --tasks data/tasks/sample_tasks.json
+python scripts/evaluate_superopt.py --tasks data/tasks/sample_tasks.json
+python scripts/compare_all.py --tasks data/tasks/sample_tasks.json
+
+# Analyze results
 python scripts/analyze_results.py --results-dir results/
 ```
 
-## Project Structure
 
-```
-superopt/
-├── superopt/                 # Main package
-│   ├── core/                 # Core abstractions
-│   │   ├── environment.py    # AgenticEnvironment, PromptConfig, ToolSchema
-│   │   ├── trace.py          # ExecutionTrace, ToolCall
-│   │   └── nlg.py            # NaturalLanguageGradient
-│   ├── adapters/             # Agent framework integrations
-│   │   ├── base.py           # AgentAdapter base class
-│   │   ├── aider_adapter.py  # Aider integration
-│   │   └── letta_adapter.py  # Letta integration
-│   ├── comparison/           # Comparison with baselines
-│   ├── rag/                  # RAG optimization (LanceDB)
-│   ├── optimizer.py          # Main SuperOpt class
-│   ├── supercontroller.py    # Failure diagnosis
-│   ├── superprompt.py        # Prompt optimization
-│   ├── superreflexion.py     # Tool schema repair
-│   ├── superrag.py           # Retrieval optimization
-│   └── supermem.py           # Memory optimization
-├── examples/                 # Usage examples
-├── scripts/                  # Evaluation scripts
-├── data/                     # Task datasets
-├── tests/                    # Unit tests
-└── pyproject.toml            # Package configuration
-```
 
-## Evaluation
+## 📈 Evaluation Metrics
 
-SuperOpt evaluates improvements along multiple dimensions:
+SuperOpt evaluates improvements across multiple dimensions:
 
-- **Reliability**: Reduction in repeated failures
-- **Stability**: Persistence of improvements over time
-- **Efficiency**: Token usage, retry counts
-- **Generalization**: Transfer across tasks
-- **Interpretability**: Human-readable updates
+<div align="center">
 
-## Related Work
+| 🔒 **Reliability** | 🛡️ **Stability** | ⚡ **Efficiency** | 🌍 **Generalization** | 👁️ **Interpretability** |
+|:------------------:|:----------------:|:----------------:|:---------------------:|:-----------------------:|
+| Reduction in repeated failures | Persistence of improvements over time | Token usage, retry counts | Transfer across tasks | Human-readable updates |
 
-SuperOpt builds on and extends:
-- **GEPA** [Agrawal et al., 2025]: Evolutionary prompt optimization
-- **ACE** [Zhang et al., 2025]: Agentic context engineering
-- **Meta-ACE** [Romero, 2025]: Meta-reasoning extensions
-- **DSPy** [Khattab et al., 2023]: Prompt programming framework
-- **TextGrad** [Yuksekgonul et al., 2024]: Textual differentiation
+</div>
 
-## Contributing
+## 🔬 Related Research
 
-Contributions welcome! Please:
+SuperOpt builds upon groundbreaking work in agent optimization:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+<div align="center">
 
-### Development Setup
+| 🎯 **GEPA** | 🧠 **ACE** | 🎓 **Meta-ACE** | 🔧 **DSPy** | 📝 **TextGrad** |
+|:-----------:|:----------:|:---------------:|:-----------:|:--------------:|
+| Evolutionary prompt optimization | Agentic context engineering | Meta-reasoning extensions | Prompt programming framework | Textual differentiation |
+
+*Agrawal et al. (2025) • Zhang et al. (2025) • Romero (2025) • Khattab et al. (2023) • Yuksekgonul et al. (2024)*
+
+</div>
+
+## 🤝 Contributing
+
+<div align="center">
+
+**We welcome contributions!** Here's how to get started:
+
+</div>
+
+### 🚀 Quick Start
+
+1. **Fork** the repository
+2. **Create** a feature branch: `git checkout -b feature/amazing-feature`
+3. **Commit** your changes: `git commit -m 'Add amazing feature'`
+4. **Push** to the branch: `git push origin feature/amazing-feature`
+5. **Open** a Pull Request
+
+### 🛠️ Development Setup
 
 ```bash
 git clone https://github.com/SuperagenticAI/superopt.git
 cd superopt
 pip install -e ".[dev]"
 
-# Run tests
+# Run tests and quality checks
 pytest
-
-# Format code
 black .
 ruff check .
 ```
 
-## License
+---
 
-Apache License 2.0 - see [LICENSE](LICENSE) file for details.
+<div align="center">
 
-## Support
+## 📄 License
 
-- **Issues**: [GitHub Issues](https://github.com/SuperagenticAI/superopt/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/SuperagenticAI/superopt/discussions)
-- **Email**: shashi@super-agentic.ai
+**Apache License 2.0** - see [LICENSE](LICENSE) file for details.
+
+## 🤝 Support & Community
+
+<div align="center">
+
+| 📧 **Email** | 🐛 **Issues** | 💬 **Discussions** | 🌟 **Contribute** |
+|:------------:|:-------------:|:------------------:|:----------------:|
+| shashi@super-agentic.ai | [GitHub Issues](https://github.com/SuperagenticAI/superopt/issues) | [GitHub Discussions](https://github.com/SuperagenticAI/superopt/discussions) | [Contributing Guide](CONTRIBUTING.md) |
+
+</div>
+
+---
+
+<div align="center">
+
+**Brought to you 🔥 by [Superagentic AI](https://super-agentic.ai/)**
+
+<img src="https://img.shields.io/github/last-commit/SuperagenticAI/superopt.svg" alt="Last commit"> <img src="https://img.shields.io/github/issues/SuperagenticAI/superopt.svg" alt="Issues"> <img src="https://img.shields.io/github/issues-pr/SuperagenticAI/superopt.svg" alt="Pull requests">
+
+</div>
