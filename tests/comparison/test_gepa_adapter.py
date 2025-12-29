@@ -14,6 +14,14 @@ from unittest.mock import Mock
 
 import pytest
 
+# Check if GEPA is available
+try:
+    import gepa  # noqa: F401
+
+    GEPA_AVAILABLE = True
+except ImportError:
+    GEPA_AVAILABLE = False
+
 from superopt.adapters.base import AgentAdapter
 from superopt.comparison.gepa_adapter import (
     AgentDataInst,
@@ -251,6 +259,7 @@ class TestAgentGEPAAdapter:
         # Compiler errors suggest prompt issues
         assert adapter.failure_score <= score < 0.9
 
+    @pytest.mark.skipif(not GEPA_AVAILABLE, reason="GEPA not installed")
     def test_evaluate_success(self):
         """Test evaluate() with successful execution."""
         trace = create_success_trace()
@@ -271,6 +280,7 @@ class TestAgentGEPAAdapter:
         assert all(output["success"] for output in result.outputs)
         assert all(score == 1.0 for score in result.scores)
 
+    @pytest.mark.skipif(not GEPA_AVAILABLE, reason="GEPA not installed")
     def test_evaluate_with_traces(self):
         """Test evaluate() with trace capture enabled."""
         trace = create_success_trace()
@@ -286,6 +296,7 @@ class TestAgentGEPAAdapter:
         assert len(result.trajectories) == 1
         assert result.trajectories[0]["data"]["input"] == "Task 1"
 
+    @pytest.mark.skipif(not GEPA_AVAILABLE, reason="GEPA not installed")
     def test_evaluate_failure(self):
         """Test evaluate() with failed execution."""
         trace = create_failure_trace()
@@ -301,6 +312,7 @@ class TestAgentGEPAAdapter:
         assert not result.outputs[0]["success"]
         assert result.scores[0] < 1.0
 
+    @pytest.mark.skipif(not GEPA_AVAILABLE, reason="GEPA not installed")
     def test_evaluate_empty_task(self):
         """Test evaluate() with empty task description."""
         trace = create_success_trace()
@@ -316,6 +328,7 @@ class TestAgentGEPAAdapter:
         assert not result.outputs[0]["success"]
         assert result.scores[0] == adapter.failure_score
 
+    @pytest.mark.skipif(not GEPA_AVAILABLE, reason="GEPA not installed")
     def test_evaluate_exception_handling(self):
         """Test evaluate() handles exceptions gracefully."""
         agent_adapter = Mock()
@@ -332,6 +345,7 @@ class TestAgentGEPAAdapter:
         assert not result.outputs[0]["success"]
         assert "Error" in result.outputs[0]["response"]
 
+    @pytest.mark.skipif(not GEPA_AVAILABLE, reason="GEPA not installed")
     def test_evaluate_candidate_extraction(self):
         """Test evaluate() extracts prompt from candidate correctly."""
         trace = create_success_trace()

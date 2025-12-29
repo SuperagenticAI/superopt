@@ -334,7 +334,7 @@ def parse_python_file(file_path: str) -> list[CodeChunk]:
             chunks.append(
                 CodeChunk(
                     file_path=file_path,
-                    content=docstring,
+                    content=str(docstring),
                     chunk_type="docstring",
                     name=Path(file_path).stem,
                     start_line=1,
