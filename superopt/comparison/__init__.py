@@ -5,4 +5,3 @@ from superopt.comparison.framework import ComparisonFramework
 from superopt.comparison.gepa_comparison import GEPAComparison
 
 __all__ = ["GEPAComparison", "ACEComparison", "ComparisonFramework"]
-

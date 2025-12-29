@@ -134,8 +134,12 @@ class SuperReflexion:
 
             # Common error patterns
             if "index" in error_msg_lower or "line" in error_msg_lower:
-                if ("0" in error_msg or "zero" in error_msg_lower or
-                    "1-indexed" in error_msg_lower or "one-indexed" in error_msg_lower):
+                if (
+                    "0" in error_msg
+                    or "zero" in error_msg_lower
+                    or "1-indexed" in error_msg_lower
+                    or "one-indexed" in error_msg_lower
+                ):
                     diagnosis["new_constraints"].append(
                         "CRITICAL: Line numbers and indices are 1-indexed, not 0-indexed."
                     )

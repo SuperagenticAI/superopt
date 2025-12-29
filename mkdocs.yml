@@ -118,20 +118,6 @@ plugins:
             signature_crossrefs: true
             summary: true
 
-# Customization
-extra:
-  version:
-    provider: mike
-    default: latest
-
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/SuperagenticAI/superopt
-      name: GitHub Repository
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/superopt/
-      name: PyPI Package
-
 # Extensions
 markdown_extensions:
   # Python Markdown
@@ -190,6 +176,16 @@ markdown_extensions:
 # Extra configuration
 extra:
   generator: false
+  version:
+    provider: mike
+    default: latest
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/SuperagenticAI/superopt
+      name: GitHub Repository
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/superopt/
+      name: PyPI Package
 extra_css:
   - stylesheets/extra.css
 
