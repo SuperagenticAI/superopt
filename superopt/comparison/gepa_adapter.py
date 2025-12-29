@@ -362,14 +362,14 @@ class AgentGEPAAdapter:
                     )
 
         # Ensure correct lengths (GEPA contract requirement)
-        assert len(outputs) == len(scores) == len(batch), (
-            f"Length mismatch: outputs={len(outputs)}, scores={len(scores)}, batch={len(batch)}"
-        )
+        assert (
+            len(outputs) == len(scores) == len(batch)
+        ), f"Length mismatch: outputs={len(outputs)}, scores={len(scores)}, batch={len(batch)}"
 
         if capture_traces:
-            assert trajectories is not None and len(trajectories) == len(batch), (
-                f"Trajectories length mismatch: {len(trajectories) if trajectories else 0} != {len(batch)}"
-            )
+            assert (
+                trajectories is not None and len(trajectories) == len(batch)
+            ), f"Trajectories length mismatch: {len(trajectories) if trajectories else 0} != {len(batch)}"
 
         return EvaluationBatch(
             outputs=outputs,
