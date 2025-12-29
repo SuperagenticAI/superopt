@@ -125,7 +125,7 @@ class ExecutionTrace:
     def output_format_error(self) -> bool:
         """Check if there are output format errors."""
         if self.execution_results:
-            return self.execution_results.get("format_error", False)
+            return bool(self.execution_results.get("format_error", False))
         return False
 
     def repeats_known_mistake(self) -> bool:
@@ -173,8 +173,8 @@ class ExecutionTrace:
 
         if self.compiler_errors:
             parts.append(f"Compiler Errors: {len(self.compiler_errors)}")
-            for error in self.compiler_errors[:3]:
-                parts.append(f"  - {error}")
+            for compiler_error in self.compiler_errors[:3]:
+                parts.append(f"  - {compiler_error}")
 
         if self.retrieval_queries:
             parts.append(f"Retrieval Queries: {len(self.retrieval_queries)}")

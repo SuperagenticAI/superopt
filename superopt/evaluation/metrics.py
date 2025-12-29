@@ -141,7 +141,7 @@ class GeneralizationMetrics:
     @staticmethod
     def compute_generalization(
         task_results: dict[str, list[ExecutionTrace]],
-    ) -> dict[str, float]:
+    ) -> dict[str, Any]:
         """
         Compute generalization metrics across tasks.
 

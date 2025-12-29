@@ -435,7 +435,8 @@ def compare_results(ace_results: dict, supermem_results: dict, superopt_file: Pa
     )
 
     print("\n## Key Insights")
-    print("""
+    print(
+        """
 1. **ACE Limitations**:
    - Playbook grows unboundedly with each task
    - No decay mechanism - stale information persists
@@ -452,7 +453,8 @@ def compare_results(ace_results: dict, supermem_results: dict, superopt_file: Pa
    - Combines SuperMem with SuperPrompt, SuperReflexion, SuperRAG
    - Can fix failures that memory alone cannot address
    - Stability guarantees via hierarchy of mutability
-""")
+"""
+    )
 
     return {
         "ace": ace_m,

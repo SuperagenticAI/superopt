@@ -111,7 +111,7 @@ Provide a detailed solution approach and implementation."""
         # For agent tasks without ground truth, we can't evaluate directly
         # ACE will use execution feedback instead
         if not expected:
-            return None  # No ground truth available
+            return False  # No ground truth available
 
         # Simple string matching (can be enhanced)
         generated_lower = generated.lower().strip()

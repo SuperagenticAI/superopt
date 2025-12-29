@@ -134,8 +134,10 @@ class MemoryEntry:
 
     def decay(self, lambda_decay: float, current_time: datetime) -> float:
         """Apply exponential decay to confidence."""
-        delta_t = (current_time - self.timestamp).total_seconds() / 3600  # hours
-        return self.confidence * (1.0 - lambda_decay) ** delta_t
+        total_seconds: float = (current_time - self.timestamp).total_seconds()
+        delta_t: float = total_seconds / 3600  # hours
+        decay_factor: float = (1.0 - lambda_decay) ** delta_t
+        return self.confidence * decay_factor
 
     def to_dict(self) -> dict[str, Any]:
         return {

@@ -12,6 +12,10 @@ SuperOpt formalizes optimization as iterative descent over **Natural Language Gr
 - **SuperRAG**: Adaptive retrieval optimization
 - **SuperMem**: Typed memory with decay and conflict resolution
 
+## Research Paper
+
+The research paper describing SuperOpt has been uploaded and will be available soon after launch.
+
 ## Key Features
 
 - **Environment-Level Optimization**: Optimize prompts, tools, retrieval, and memory as a unified system
@@ -39,7 +43,7 @@ pip install -e .
 ### Optional Dependencies
 
 ```bash
-# Development tools (pytest, black, ruff, mypy)
+# Development tools (pytest, black, ruff)
 pip install -e ".[dev]"
 
 # Aider integration (for coding agent optimization)
@@ -317,14 +321,6 @@ SuperOpt evaluates improvements along multiple dimensions:
 - **Generalization**: Transfer across tasks
 - **Interpretability**: Human-readable updates
 
-## Paper
-
-This implementation accompanies the paper:
-
-> **SuperOpt: Agentic Environment Optimization for Autonomous AI Agents**
-> Shashi Jagtap, Superagentic AI
-> arXiv:XXXX.XXXXX (2025)
-
 ## Related Work
 
 SuperOpt builds on and extends:
@@ -357,28 +353,11 @@ pytest
 # Format code
 black .
 ruff check .
-
-# Type checking
-mypy superopt/
 ```
 
 ## License
 
 Apache License 2.0 - see [LICENSE](LICENSE) file for details.
-
-## Citation
-
-If you use SuperOpt in your research, please cite:
-
-```bibtex
-@misc{jagtap2025superopt,
-  title={SuperOpt: Agentic Environment Optimization for Autonomous AI Agents},
-  author={Jagtap, Shashi},
-  year={2025},
-  howpublished={\url{https://github.com/SuperagenticAI/superopt}},
-  note={Superagentic AI}
-}
-```
 
 ## Support
 

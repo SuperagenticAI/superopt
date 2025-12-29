@@ -706,7 +706,8 @@ def main():
         superrag_rate = experiments[3].success_rate
         improvement = superrag_rate - baseline_rate
 
-        print(f"""
+        print(
+            f"""
 With restrictive top_k=1, baseline achieves only {baseline_rate:.0f}% success.
 GEPA cannot improve this because it can only rewrite queries, not change:
   - top_k values (stuck at k=1)
@@ -719,7 +720,8 @@ SuperRAG adapts non-textual retrieval parameters:
 
 Result: SuperRAG achieves {superrag_rate:.0f}% vs baseline {baseline_rate:.0f}% (+{improvement:.0f}%)
 This proves optimization of the Retrieval (R) layer in Φ = {{P, T, R, M}}.
-""")
+"""
+        )
 
         # Save results
         output_file = Path(args.output)

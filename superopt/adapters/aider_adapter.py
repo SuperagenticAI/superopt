@@ -56,7 +56,7 @@ class TraceCapturingIO:
         # Required attributes for Aider compatibility
         self.encoding = "utf-8"
         self.dry_run = False
-        self.never_prompts = set()
+        self.never_prompts: set[str] = set()
         self.num_error_outputs = 0
         self.num_user_asks = 0
         self.multiline_mode = False
@@ -488,8 +488,8 @@ class AiderAdapter(AgentAdapter):
 
         # Check for retrieval issues (missing symbols, imports)
         if trace.compiler_errors:
-            for err in trace.compiler_errors:
-                err_lower = err.lower()
+            for compiler_err in trace.compiler_errors:
+                err_lower = compiler_err.lower()
                 if "not defined" in err_lower or "cannot find" in err_lower:
                     return FailureType.RETRIEVAL
                 if "import" in err_lower:

@@ -120,6 +120,7 @@ class GEPAComparison:
             self.gepa_result = gepa_result
             self.optimized_prompts = gepa_result.best_candidate
 
+            assert self.optimized_prompts is not None, "GEPA should return a valid candidate"
             return self.optimized_prompts
 
         except Exception as e:

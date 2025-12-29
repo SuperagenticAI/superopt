@@ -167,12 +167,12 @@ def _create_production_config():
 
 
 # Lazy-loaded configs (created on first access)
-_CLOUD_DEV_CONFIG = None
-_CLOUD_DEV_CONFIG_ANTHROPIC = None
-_PRODUCTION_CONFIG = None
+_CLOUD_DEV_CONFIG: ModelConfig | None = None
+_CLOUD_DEV_CONFIG_ANTHROPIC: ModelConfig | None = None
+_PRODUCTION_CONFIG: ModelConfig | None = None
 
 
-def _get_cloud_dev_config():
+def _get_cloud_dev_config() -> ModelConfig:
     """Get or create cloud dev config."""
     global _CLOUD_DEV_CONFIG
     if _CLOUD_DEV_CONFIG is None:
@@ -180,7 +180,7 @@ def _get_cloud_dev_config():
     return _CLOUD_DEV_CONFIG
 
 
-def _get_cloud_dev_config_anthropic():
+def _get_cloud_dev_config_anthropic() -> ModelConfig:
     """Get or create Anthropic cloud dev config."""
     global _CLOUD_DEV_CONFIG_ANTHROPIC
     if _CLOUD_DEV_CONFIG_ANTHROPIC is None:
@@ -188,7 +188,7 @@ def _get_cloud_dev_config_anthropic():
     return _CLOUD_DEV_CONFIG_ANTHROPIC
 
 
-def _get_production_config():
+def _get_production_config() -> ModelConfig:
     """Get or create production config."""
     global _PRODUCTION_CONFIG
     if _PRODUCTION_CONFIG is None:
@@ -279,7 +279,7 @@ def create_llm_client(model_config: ModelConfig):
                 temperature=kwargs.get("temperature", self.config.temperature),
                 max_tokens=kwargs.get("max_tokens", self.config.max_tokens),
             )
-            return response.choices[0].message.content
+            return str(response.choices[0].message.content)
 
         def generate_reflection(self, prompt: str, **kwargs) -> str:
             """Generate reflection using reflection model."""

@@ -49,9 +49,6 @@ ruff check .
 
 # Formatting
 black .
-
-# Type checking
-mypy superopt/
 ```
 
 ### Running Tests
@@ -99,7 +96,6 @@ pre-commit run --all-files
    ```bash
    ruff check .
    black --check .
-   mypy superopt/
    pytest
    ```
 

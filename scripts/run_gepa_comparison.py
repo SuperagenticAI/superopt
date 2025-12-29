@@ -192,7 +192,8 @@ def compare_with_superopt(gepa_results: dict, superopt_file: Path):
 
     # Key insight
     print("\n## Key Insight")
-    print("""
+    print(
+        """
 GEPA can only optimize prompts (P). When failures originate from:
 - Tool schema issues (T) → GEPA cannot fix
 - Retrieval configuration (R) → GEPA cannot fix
@@ -200,7 +201,8 @@ GEPA can only optimize prompts (P). When failures originate from:
 
 SuperOpt optimizes the full environment Φ = {P, T, R, M}, enabling
 it to fix failures that prompt-only optimization cannot address.
-""")
+"""
+    )
 
     return {
         "baseline": {"success": baseline_success, "total": len(baseline_results)},

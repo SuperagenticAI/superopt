@@ -351,25 +351,25 @@ class AgentGEPAAdapter:
                 scores.append(self.failure_score)
 
                 if trajectories is not None:
-                    traj_data: AgentDataInst = {
+                    error_traj_data: AgentDataInst = {
                         "input": task_desc or "Unknown task",
                     }
                     trajectories.append(
                         {
-                            "data": traj_data,
+                            "data": error_traj_data,
                             "full_response": error_response,
                         }
                     )
 
         # Ensure correct lengths (GEPA contract requirement)
-        assert len(outputs) == len(scores) == len(batch), (
-            f"Length mismatch: outputs={len(outputs)}, scores={len(scores)}, batch={len(batch)}"
-        )
+        assert (
+            len(outputs) == len(scores) == len(batch)
+        ), f"Length mismatch: outputs={len(outputs)}, scores={len(scores)}, batch={len(batch)}"
 
         if capture_traces:
-            assert trajectories is not None and len(trajectories) == len(batch), (
-                f"Trajectories length mismatch: {len(trajectories) if trajectories else 0} != {len(batch)}"
-            )
+            assert (
+                trajectories is not None and len(trajectories) == len(batch)
+            ), f"Trajectories length mismatch: {len(trajectories) if trajectories else 0} != {len(batch)}"
 
         return EvaluationBatch(
             outputs=outputs,

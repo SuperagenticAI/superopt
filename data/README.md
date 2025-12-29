@@ -135,4 +135,3 @@ All tasks use SuperOpt format (JSON):
 - Use `prepare_datasets.py` to convert to GEPA/ACE formats
 - Tasks should be executable by your agent adapter
 - Include metadata for better analysis and categorization
-

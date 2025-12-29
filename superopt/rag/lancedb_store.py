@@ -120,7 +120,7 @@ class LanceDBStore:
 
         # Initialize database
         self.db = lancedb.connect(db_path)
-        self.table = None
+        self.table: Any = None  # LanceDB table, typed as Any due to dynamic nature
         self._embedding_func = None
 
     def _get_embedding_func(self):
@@ -212,6 +212,8 @@ class LanceDBStore:
                 self.table = self.db.open_table(self.table_name)
             except Exception:
                 return []
+
+        assert self.table is not None, "Table should be initialized"
 
         config = config or RetrievalConfig()
 

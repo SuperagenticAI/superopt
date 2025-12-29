@@ -318,7 +318,7 @@ class SuperPrompt:
         new_prompt: PromptConfig,
     ) -> dict[str, Any]:
         """Compute delta between old and new prompts."""
-        delta = {}
+        delta: dict[str, Any] = {}
 
         # Check for additions
         new_constraints = [

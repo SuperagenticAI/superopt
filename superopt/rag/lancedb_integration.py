@@ -151,6 +151,7 @@ class LanceDBRetrievalBackend:
 
             # Create table if it doesn't exist
             if not self._table:
+                assert self._db is not None, "Database not initialized. Call initialize() first."
                 self._table = self._db.create_table(
                     self.table_name,
                     df,

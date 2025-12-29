@@ -122,7 +122,7 @@ class SuperReflexion:
         Returns:
             Dictionary with diagnosis and suggested fixes
         """
-        diagnosis = {
+        diagnosis: dict[str, Any] = {
             "error_patterns": [],
             "missing_constraints": [],
             "new_constraints": [],
@@ -209,6 +209,6 @@ that were violated. Format as a bulleted list of critical rules.
 
         try:
             response = self.llm_client.generate(prompt)
-            return response.strip()
+            return str(response).strip()
         except Exception:
             return self._rule_based_clarification(diagnosis, schema)

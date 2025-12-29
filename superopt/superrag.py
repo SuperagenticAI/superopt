@@ -5,6 +5,8 @@ SuperRAG treats retrieval configuration as a tunable control surface,
 adapting parameters based on execution trace feedback.
 """
 
+from typing import Any
+
 from superopt.core.environment import AgenticEnvironment, RetrievalConfig
 from superopt.core.nlg import NaturalLanguageGradient
 from superopt.core.trace import ExecutionTrace
@@ -110,7 +112,7 @@ class SuperRAG:
         tuned_config = self.tune(environment.retrieval, trace)
 
         # Compute delta
-        delta_r = {}
+        delta_r: dict[str, Any] = {}
         if tuned_config.top_k != environment.retrieval.top_k:
             delta_r["top_k"] = tuned_config.top_k
         if tuned_config.mode != environment.retrieval.mode:
