@@ -11,18 +11,22 @@
 
   **Agentic Environment Optimization for Autonomous AI Agents**
 
-  <p>
-    <a href="https://pypi.org/project/superopt/"><img src="https://img.shields.io/pypi/v/superopt.svg" alt="PyPI"></a>
-    <a href="https://github.com/SuperagenticAI/superopt/actions"><img src="https://github.com/SuperagenticAI/superopt/workflows/CI/badge.svg" alt="CI"></a>
-    <a href="https://github.com/SuperagenticAI/superopt/blob/main/LICENSE"><img src="https://img.shields.io/github/license/SuperagenticAI/superopt.svg" alt="License"></a>
-    <a href="https://github.com/SuperagenticAI/superopt/stargazers"><img src="https://img.shields.io/github/stars/SuperagenticAI/superopt.svg" alt="GitHub stars"></a>
-    <a href="https://super-agentic.ai/papers/SuperOpt.pdf"><img src="https://img.shields.io/badge/Paper-PDF-blue.svg" alt="Paper"></a>
-  </p>
+   <p>
+     <a href="https://pypi.org/project/superopt/"><img src="https://img.shields.io/pypi/v/superopt.svg" alt="PyPI"></a>
+     <a href="https://github.com/SuperagenticAI/superopt/actions"><img src="https://github.com/SuperagenticAI/superopt/workflows/CI/badge.svg" alt="CI"></a>
+     <a href="https://github.com/SuperagenticAI/superopt/blob/main/LICENSE"><img src="https://img.shields.io/github/license/SuperagenticAI/superopt.svg" alt="License"></a>
+     <a href="https://github.com/SuperagenticAI/superopt/stargazers"><img src="https://img.shields.io/github/stars/SuperagenticAI/superopt.svg" alt="GitHub stars"></a>
+     <a href="https://super-agentic.ai/papers/SuperOpt.pdf"><img src="https://img.shields.io/badge/Paper-PDF-blue.svg" alt="Paper"></a>
+     <a href="https://superagenticai.github.io/superopt/"><img src="https://img.shields.io/badge/docs-mkdocs-blue.svg" alt="Documentation"></a>
+     <a href="https://super-agentic.ai/research/superopt"><img src="https://img.shields.io/badge/web-super--agentic.ai-blue.svg" alt="Website"></a>
+   </p>
 
   <p align="center">
     <em>SuperOpt is a unified framework for optimizing agent environments (prompts, tools, retrieval, memory) without modifying model parameters. It treats the entire agent environment as a structured optimization target, enabling autonomous agents to self-correct and stabilize over time.</em>
    </p>
 </div>
+
+📖 [Documentation](https://superagenticai.github.io/superopt/) | 🌐 [Website](https://super-agentic.ai/research/superopt) | 📄 [Paper](https://super-agentic.ai/papers/SuperOpt.pdf)
 
 ## Problem Setting
 

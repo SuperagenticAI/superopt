@@ -26,11 +26,13 @@
        </p>
     </div>
   </div>
-  <div class="hero-center-cta">
-    <div class="hero-actions">
-      <a href="getting-started/installation/" class="cta-button primary">Get Started</a>
-    </div>
-  </div>
+   <div class="hero-center-cta">
+     <div class="hero-actions">
+       <a href="getting-started/installation/" class="cta-button primary">Get Started</a>
+       <a href="https://super-agentic.ai/research/superopt" class="cta-button secondary">Website</a>
+       <a href="https://super-agentic.ai/papers/SuperOpt.pdf" class="cta-button secondary">Paper</a>
+     </div>
+   </div>
 </div>
 
 ## 🌟 What is Agent Environment Optimization?
@@ -307,6 +309,42 @@ print(optimizer.environment.tools['edit_file'].description)
   line-height: 1.6;
   color: var(--md-default-fg-color--light);
   margin: 0;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+}
+
+.cta-button.primary:hover {
+  opacity: 0.9;
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: var(--md-primary-fg-color);
+  border: 2px solid var(--md-primary-fg-color);
+}
+
+.cta-button.secondary:hover {
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
 }
 
 /* ===== OPTIMIZATION FLOW VISUAL ===== */
@@ -669,6 +707,11 @@ print(optimizer.environment.tools['edit_file'].description)
 
   .optimization-flow {
     padding: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
   }
 
   .flow-step {
