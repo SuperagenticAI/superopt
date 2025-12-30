@@ -10,12 +10,24 @@
     <a href="https://github.com/SuperagenticAI/superopt/actions"><img src="https://github.com/SuperagenticAI/superopt/workflows/CI/badge.svg" alt="CI"></a>
     <a href="https://github.com/SuperagenticAI/superopt/blob/main/LICENSE"><img src="https://img.shields.io/github/license/SuperagenticAI/superopt.svg" alt="License"></a>
     <a href="https://github.com/SuperagenticAI/superopt/stargazers"><img src="https://img.shields.io/github/stars/SuperagenticAI/superopt.svg" alt="GitHub stars"></a>
+    <a href="https://super-agentic.ai/papers/SuperOpt.pdf"><img src="https://img.shields.io/badge/Paper-PDF-blue.svg" alt="Paper"></a>
   </p>
 
   <p align="center">
     <em>SuperOpt is a unified framework for optimizing agent environments (prompts, tools, retrieval, memory) without modifying model parameters. It treats the entire agent environment as a structured optimization target, enabling autonomous agents to self-correct and stabilize over time.</em>
-  </p>
+   </p>
 </div>
+
+## Problem Setting
+
+Autonomous agents operate in environments composed of prompts, tools, retrieval systems, and memory.
+Failures often arise from mismatches or inconsistencies in these components rather than from model parameters themselves.
+
+SuperOpt formalizes this setting and provides a structured way to:
+- represent agent environments,
+- observe execution traces,
+- attribute failures, and
+- apply targeted environment-level updates.
 
 ---
 
@@ -47,9 +59,23 @@ SuperOpt formalizes optimization as iterative descent over **Natural Language Gr
 
 </div>
 
-## Research Paper
+## Citation
 
-The research paper describing SuperOpt has been uploaded and will be available soon after launch.
+If you use this work, please cite:
+
+```bibtex
+@misc{superopt2025,
+title={SuperOpt: Agentic Environment Optimization for Autonomous AI Agents},
+author={Jagtap, Shashi},
+year={2025},
+note={Under review},
+url={https://super-agentic.ai/research/superopt}
+}
+```
+
+## Status
+
+📌 Under review on public research platforms — early access available via this repository and the project website. Paper is available to read [https://super-agentic.ai/papers/SuperOpt.pdf](https://super-agentic.ai/papers/SuperOpt.pdf) also link to the webpage [https://super-agentic.ai/research/superopt](https://super-agentic.ai/research/superopt)
 
 ## Key Features
 
