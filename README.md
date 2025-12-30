@@ -462,9 +462,9 @@ ruff check .
 
 <div align="center">
 
-| 📧 **Email** | 🐛 **Issues** | 💬 **Discussions** | 🌟 **Contribute** |
-|:------------:|:-------------:|:------------------:|:----------------:|
-| shashi@super-agentic.ai | [GitHub Issues](https://github.com/SuperagenticAI/superopt/issues) | [GitHub Discussions](https://github.com/SuperagenticAI/superopt/discussions) | [Contributing Guide](CONTRIBUTING.md) |
+| 📧 **Email** | 🐛 **Issues** | 🌟 **Contribute** |
+|:------------:|:-------------:|:----------------:|
+| research@super-agentic.ai | [GitHub Issues](https://github.com/SuperagenticAI/superopt/issues) | [Contributing Guide](CONTRIBUTING.md) |
 
 </div>
 
@@ -474,6 +474,6 @@ ruff check .
 
 **Brought to you 🔥 by [Superagentic AI](https://super-agentic.ai/)**
 
-<img src="https://img.shields.io/github/last-commit/SuperagenticAI/superopt.svg" alt="Last commit"> <img src="https://img.shields.io/github/issues/SuperagenticAI/superopt.svg" alt="Issues"> <img src="https://img.shields.io/github/issues-pr/SuperagenticAI/superopt.svg" alt="Pull requests">
+
 
 </div>
