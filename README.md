@@ -1,6 +1,12 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/SuperagenticAI/superopt/main/assets/SuperOpt_logo.png" alt="SuperOpt Logo" width="400" height="auto">
 
+  <div align="center">
+
+  🎉 SuperOpt is now publicly released — [research paper](https://super-agentic.ai/papers/SuperOpt.pdf) + [open-source library](https://super-agentic.ai/research/superopt)
+
+  </div>
+
   # 🚀 SuperOpt
 
   **Agentic Environment Optimization for Autonomous AI Agents**

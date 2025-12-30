@@ -11,12 +11,19 @@
       <img src="assets/SuperOpt_logo.png" alt="SuperOpt Logo" class="hero-logo-large">
     </div>
     <div class="hero-right">
-      <p class="hero-subtitle">
-        Agentic Environment Optimization for Autonomous AI Agents
-      </p>
-      <p class="hero-built-by">
-        Built by <a href="https://super-agentic.ai/" target="_blank" rel="noopener">Superagentic AI</a>
-      </p>
+       <p class="hero-subtitle">
+         Agentic Environment Optimization for Autonomous AI Agents
+       </p>
+       <p class="hero-badges">
+         <a href="https://pypi.org/project/superopt/"><img src="https://img.shields.io/pypi/v/superopt.svg" alt="PyPI"></a>
+         <a href="https://github.com/SuperagenticAI/superopt/actions"><img src="https://github.com/SuperagenticAI/superopt/workflows/CI/badge.svg" alt="CI"></a>
+         <a href="https://github.com/SuperagenticAI/superopt/blob/main/LICENSE"><img src="https://img.shields.io/github/license/SuperagenticAI/superopt.svg" alt="License"></a>
+         <a href="https://github.com/SuperagenticAI/superopt/stargazers"><img src="https://img.shields.io/github/stars/SuperagenticAI/superopt.svg" alt="GitHub stars"></a>
+         <a href="https://super-agentic.ai/papers/SuperOpt.pdf"><img src="https://img.shields.io/badge/Paper-PDF-blue.svg" alt="Paper"></a>
+       </p>
+       <p class="hero-built-by">
+         Built by <a href="https://super-agentic.ai/" target="_blank" rel="noopener">Superagentic AI</a>
+       </p>
     </div>
   </div>
   <div class="hero-center-cta">
@@ -284,8 +291,15 @@ print(optimizer.environment.tools['edit_file'].description)
 .hero-subtitle {
   font-size: clamp(1.2rem, 2vw, 1.8rem);
   font-weight: 600;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1rem 0;
   color: var(--md-primary-fg-color);
+}
+
+.hero-badges {
+  margin: 1rem 0 1.5rem 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .hero-description {
@@ -627,6 +641,10 @@ print(optimizer.environment.tools['edit_file'].description)
     font-size: 1.4rem;
   }
 
+  .hero-badges {
+    justify-content: center;
+  }
+
   .problem-solution {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -677,6 +695,11 @@ print(optimizer.environment.tools['edit_file'].description)
 
   .hero-subtitle {
     font-size: 1.2rem;
+  }
+
+  .hero-badges {
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-description {
